@@ -1,0 +1,19 @@
+
+body
+{
+  background:url("../img/88.jpg");
+	
+	background-size: cover;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	background-attachment: fixed;
+	
+  
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: sans-serif;
+  height: 70vh;
+  background-size: 100% 100%;
+}
+

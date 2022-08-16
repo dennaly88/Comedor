@@ -1,0 +1,20 @@
+<?php
+include ('conexion.php');
+$tag =$_POST['tag'];
+$nombre =$_POST['nom'];
+$siglas =$_POST['si'];
+$ubicacion =$_POST['ubi'];
+
+
+
+$query = "INSERT INTO gerencias (tag,nombre,siglas,ubicacion) VALUES ('$tag','$nombre','$siglas','$ubicacion')";
+$result = pg_query($conexion, $query) or die('ERROR AL INSERTAR DATOS: ' . pg_last_error());
+$cmdtuples = pg_affected_rows($result);
+header("Location:../principal-administrar.php?usu=1");
+echo $cmdtuples . " datos registrados.\n";
+pg_free_result($result); 
+
+
+
+
+
